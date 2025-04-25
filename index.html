@@ -1,0 +1,92 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionCrafter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <h1>VisionCrafter</h1>
+      </div>
+      <div class="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <form class="prompt-form">
+        <div class="prompt-container">
+          <textarea class="prompt-input" placeholder="Describe what you want to see" required autofocus></textarea>
+        </div>
+
+        <div class="prompt-actions">
+            <div class="select-wrapper">
+          <select class="custom-select style-select">
+            <option value="" selected disabled>Select Style</option>
+            <option value="photorealistic">Photorealistic</option>
+            <option value="digital art">Digital Art</option>
+            <option value="sketch">Sketch</option>
+            <option value="watercolor">Watercolor</option>
+            <option value="cyberpunk">Cyberpunk</option>
+            <option value="vintage">Vintage</option>
+          </select>
+          </div>
+
+          <div class="select-wrapper">
+            <select class="custom-select image-count" required>
+              <option value="" selected disabled>Image Count</option>
+              <option value="1">1 Image</option>
+              <option value="2">2 Images</option>
+              <option value="3">3 Images</option>
+              <option value="4">4 Images</option>
+            </select>
+          </div>
+
+          <div class="select-wrapper">
+            <select class="custom-select aspect-ratio" required>
+              <option value="" selected disabled>Aspect Ratio</option>
+              <option value="1:1">Square (1:1)</option>
+              <option value="16:9">Landscape (16:9)</option>
+              <option value="9:16">Portrait (9:16)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="generate-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Recent Searches -->
+    <div class="recent-searches">
+      <h3>Recent Searches</h3>
+      <ul class="recent-list"></ul>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div class="gallery-message">
+        <i class="fa-solid fa-image"></i>
+        <p>Generated images will appear here</p>
+      </div>
+    </div>
+
+   
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
